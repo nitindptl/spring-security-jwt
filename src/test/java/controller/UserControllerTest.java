@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +20,10 @@ import org.springframework.web.context.WebApplicationContext;
 
 import com.nitin.controller.UserController;
 import com.nitin.model.User;
-import com.nitin.service.UserService;
 import com.nitin.service.impl.UserServiceImpl;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes=UserController.class)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes=UserController.class)
 public class UserControllerTest {
 
 
@@ -38,7 +35,7 @@ public class UserControllerTest {
 	 
 	MockMvc mvc;
 	
-    @Before
+    //@Before
     public void setup() {
         this.mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
         userService = new UserServiceImpl();
